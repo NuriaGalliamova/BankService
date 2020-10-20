@@ -5,7 +5,7 @@ public class BankService {
         int percentHigh = 5;
         int percentSpecial = 30;
         int cashbackLimit = 3000;
-        int cashback = expencesUsual * percentUsual / 100 + expencesHigh * percentHigh / 100 + expencesSpecial * percentSpecial / 100;
+        int cashback = (expencesUsual * percentUsual + expencesHigh * percentHigh + expencesSpecial * percentSpecial) / 100;
         if (cashback > cashbackLimit) {
             return cashbackLimit;
         }
